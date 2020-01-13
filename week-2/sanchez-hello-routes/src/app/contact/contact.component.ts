@@ -1,3 +1,8 @@
+/*
+  Author: Richard Krasso
+  Editd by: Gabriel Sanchez
+  Date: 1/12/2020
+*/
 import { Component, OnInit } from '@angular/core';
 
 @Component({

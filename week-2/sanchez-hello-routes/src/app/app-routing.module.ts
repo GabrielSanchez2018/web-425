@@ -1,3 +1,9 @@
+/*
+  Author: Richard Krasso
+  Editd by: Gabriel Sanchez
+  Date: 1/12/2020
+*/
+
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {RouterModule, Routes} from "@angular/router";
