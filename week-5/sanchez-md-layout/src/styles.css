@@ -1,1 +1,53 @@
+/*
+============================================
+; Title: Assignment 5.4
+; Author: Gabriel Sanchez
+; Date: 04 Feb 20
+; Description: Angular Material & Flex Layout
+;===========================================
+/*
+
+
+
 /* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+.parent { height: 100px; }
+.left { background-color: white }
+.right { background-color: white; }
+
+/*
+Form Styles
+*/
+.frm-login { width: 50%; margin: 0 auto; }
+.frm-login-panel { border: 3px solid green; }
+.frm-login-header { background-color: rgb(1, 124, 28); }
+.frm-login-toolbar { background-color: rgb(58, 1, 124); color: white }
+.frm-login-body { display: flex; flex-direction: column; margin-top: 10px; }
+.btn-login { background-color: green; color: white; }
+.frm-login-actions { text-align: left }
+
+.wrapper { width: 100%; margin-top: 5% }
+
+
+
+.wrapper {
+    padding: 0px 5px 0;
+    display: block;
+}
+
+.cardInner {
+    display: grid;
+    grid-template-areas: "header header" "side content" "footer footer";
+    grid-template-rows: auto auto auto;
+    grid-row-gap: 36px;
+    grid-column-gap: 16px;
+  }
+  .menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    color: white;
+}
