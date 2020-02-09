@@ -1,0 +1,28 @@
+/*
+============================================
+; Title: Assignment 6.3
+; Author: Richard Krasso
+; Edited by: Gabriel Sanchez
+; Date: 2/8/2020
+; Description: Output Properties
+;===========================================
+*/
+.priceQ {
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 10%;
+    border: 15px solid green;
+    padding: 50px;
+    margin-top: 100px;
+}
+
+.lastP {
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 10%;
+    border: 15px solid green;
+    padding: 50px;
+    margin-top: 100px;
+}

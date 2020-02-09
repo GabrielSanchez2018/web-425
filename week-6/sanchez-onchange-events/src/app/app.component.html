@@ -1,0 +1,57 @@
+<!--
+============================================
+; Title: Assignment 6.4
+; Author: Richard Krasso
+; Edited by: Gabriel Sanchez
+; Date: 2/8/2020
+; Description: On Change Events
+;===========================================
+-->
+
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <button mat-icon-button>
+      <mat-icon (click)="sidenav.toggle()">menu</mat-icon>
+    </button>
+    <h1>OnChangeEvents</h1>
+    <span class="menu-spacer"></span>
+    <div>
+      <a mat-button [routerLink]="'/child'"> Child </a>
+    
+
+    </div>
+  </mat-toolbar-row>
+
+
+</mat-toolbar>
+
+<mat-sidenav-container>
+  <mat-sidenav #sidenav>
+    <mat-nav-list>
+
+      <a mat-list-item [routerLink]="'/child'"> Child  </a>
+      
+      <a mat-list-item (click)="sidenav.toggle()" href="" mat-list-item>Close</a>
+
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div style="height: 88vh;">
+      <div class="parent">
+
+        <h2>Parent</h2>
+        <div>
+          Greeting: <input type="text" [(ngModel)]="myGreeting">
+        </div>
+      
+        <div>
+          User name: <input type="text" [(ngModel)]="myUser.name">
+        </div>
+      </div>
+      <div class="child">
+        <app-child [greeting]="myGreeting" [user]="myUser"></app-child>
+      </div>
+   
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
