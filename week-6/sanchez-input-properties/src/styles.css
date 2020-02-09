@@ -1,0 +1,12 @@
+/* You can add global styles to this file, and also import other style files */
+/*
+============================================
+; Title: Assignment 6.2
+; Author: Richard Krasso
+; Edited by: Gabriel Sanchez
+; Date: 2/8/2020
+; Description: Input Properties
+;===========================================
+*/
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

@@ -1,0 +1,22 @@
+/*
+============================================
+; Title: Assignment 6.2
+; Author: Richard Krasso
+; Edited by: Gabriel Sanchez
+; Date: 2/8/2020
+; Description: Input Properties
+;===========================================
+*/
+.stock {
+
+    margin: 50px;
+    padding-top: 100px;
+    text-align: center;
+  }
+  input{
+    width: 50%;
+  }
+
+  .numOfShares {
+      margin-left: 500px;
+  }
