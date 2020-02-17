@@ -1,0 +1,68 @@
+<!--
+============================================
+; Title: Assignment 7.3
+; Author: Richard Krasso
+; Edited by: Gabriel Sanchez
+; Date: 2/15/2020
+; Description: Form Validation
+;===========================================
+-->
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <button mat-icon-button>
+      <mat-icon (click)="sidenav.toggle()">menu</mat-icon>
+    </button>
+    <h1>Phone Form</h1>
+    <span class="menu-spacer"></span>
+    <div>
+      <a mat-button [routerLink]="'/'"> Phone Form </a>
+
+
+
+    </div>
+  </mat-toolbar-row>
+
+
+</mat-toolbar>
+
+<mat-sidenav-container>
+  <mat-sidenav #sidenav>
+    <mat-nav-list>
+
+      <a mat-list-item [routerLink]="'/'"> Phone Form </a>
+
+      <a mat-list-item (click)="sidenav.toggle()" href="" mat-list-item>Close</a>
+
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div style="height: 88vh;">
+      <div class="phoneForm">
+      <form #f="ngForm" (ngSubmit)="onSubmit(f.value)">
+        <div>
+          Phone Number
+          <input type="text" name="telephone" ngModel
+                required
+                pattern="[0-9]*"
+                minlength="10"
+                #phone="ngModel"
+                [class.hasError]="phone.isValid && phone.touched">
+
+           <div [hidden]="phone.valid || phone.pristine">
+              <div class="error" [hidden]="!phone.hasError('minlength')">Phone has to have at least 10 digits</div>
+              <div class="error" [hidden]="!phone.hasError('required')">Phone is required</div>
+              <div class="error" [hidden]="!phone.hasError('pattern')">Only Digits are allowed</div>
+
+           </div>
+        </div>
+
+        <button type="submit" [disabled]="f.valid">Submit</button>
+
+
+      </form>
+    </div>
+
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

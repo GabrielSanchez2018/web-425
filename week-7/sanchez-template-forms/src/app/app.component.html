@@ -1,0 +1,70 @@
+<!--
+============================================
+; Title: Assignment 7.2
+; Author: Richard Krasso
+; Edited by: Gabriel Sanchez
+; Date: 2/15/2020
+; Description: Template-Driven Forms
+;===========================================
+-->
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <button mat-icon-button>
+      <mat-icon (click)="sidenav.toggle()">menu</mat-icon>
+    </button>
+    <h1>Login Form</h1>
+    <span class="menu-spacer"></span>
+    <div>
+      <a mat-button [routerLink]="'/'"> Login </a>
+
+
+    </div>
+  </mat-toolbar-row>
+
+
+</mat-toolbar>
+<mat-sidenav-container>
+  <mat-sidenav #sidenav>
+    <mat-nav-list>
+
+      <a mat-list-item [routerLink]="'/accounts'"> Login </a>
+
+      <a mat-list-item (click)="sidenav.toggle()" href="" mat-list-item>Close</a>
+
+    </mat-nav-list>
+  </mat-sidenav>
+
+
+  <mat-sidenav-content>
+    <div style="height: 88vh;">
+
+    <form class="loginForm" #f="ngForm" (ngSubmit)="onSubmit(f.value)">
+      <h1>Login Form</h1>
+      <div>Username: <input type="text" name="username" ngModel></div>
+      <br>
+      <div>SSN: <input type="text" name="ssn" ngModel></div>
+      <br>
+      <div ngModelGroup="passwordsGroup">
+        <div>Password: <input type="password" name="password" ngModel></div>
+        <br>
+        <div>Confirm Password: <input type="password" name="pconfirm" ngModel></div>
+        <br>
+      </div>
+
+      <button class="btn"  type="submit">Submit</button>
+
+    </form>
+    </div>
+
+  </mat-sidenav-content>
+
+
+
+
+
+</mat-sidenav-container>
+
+
+
+
+
