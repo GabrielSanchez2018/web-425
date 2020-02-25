@@ -1,0 +1,19 @@
+{
+  "name": "sanchez-ts-server",
+  "version": "1.0.0",
+  "description": "Node and Express",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Gabriel Sanchez",
+  "license": "ISC",
+  "dependencies": {
+    "@types/express": "^4.17.2",
+    "@types/node": "^13.7.4",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "typescript": "^3.8.2"
+  }
+}
