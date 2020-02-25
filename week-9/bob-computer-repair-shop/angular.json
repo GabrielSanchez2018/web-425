@@ -124,5 +124,8 @@
       }
     }
   },
-  "defaultProject": "bob-computer-repair-shop"
+  "defaultProject": "bob-computer-repair-shop",
+  "cli": {
+    "analytics": false
+  }
 }
