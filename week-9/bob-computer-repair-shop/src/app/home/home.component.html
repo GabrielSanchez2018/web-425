@@ -1,1 +1,32 @@
-<p>home works!</p>
+<mat-card class="cardOne">
+
+  <h1>We have Great Discounts for you!</h1>
+  <h2>Select your Service</h2>
+  <!-- <mat-form-field>
+    <textarea matInput rows="10" [(ngModel)]="enteredValue" ></textarea>
+  </mat-form-field>
+<br>
+  <button
+  mat-raised-button
+  color="primary"
+  (click)="onAddPost(postInput)">Enter</button> -->
+</mat-card>
+
+
+
+
+<p>{{ newPost }}</p>
+<mat-card>
+<mat-selection-list #shoes>
+  <mat-list-option *ngFor="let shoe of typesOfShoes">
+    {{shoe.name }}  {{shoe.price}}
+  </mat-list-option>
+</mat-selection-list>
+
+<p>
+  Options selected: {{shoes.selectedOptions.selected.length}}
+</p>
+<p>
+  Total: {{selected.shoes}}
+</p>
+</mat-card>

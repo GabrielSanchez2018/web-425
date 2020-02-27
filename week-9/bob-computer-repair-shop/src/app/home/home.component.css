@@ -1,0 +1,15 @@
+mat-card {
+  width: 80%;
+  margin: auto;
+}
+
+.image {
+  width: 100px;
+  margin: auto;
+}
+.cardOne {
+  margin-top: 3%;
+}
+h1, h2{
+  text-align: center;
+}
