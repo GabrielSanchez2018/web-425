@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ShowOnDirtyErrorStateMatcher } from '@angular/material';
 
 @Component({
   selector: 'app-home',
@@ -19,6 +20,13 @@ export class HomeComponent implements OnInit {
     {'name': 'Disk Clean-up', 'price': 149.99},
 
   ];
+  current_selected: string;
+
+
+  onSelection(e, v){
+   this.current_selected = e.option.value;
+  }
+
 
 
   newPost = '';
