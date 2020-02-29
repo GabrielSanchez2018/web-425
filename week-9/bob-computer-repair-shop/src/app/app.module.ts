@@ -1,47 +1,52 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatCardModule, MatToolbarModule, MatIconModule, MatSidenavModule,
-  MatListModule, MatButtonModule, MatTableModule, MatPaginatorModule,
-  MatSortModule, MatInputModule, MatGridListModule
+import { BrowserModule } from "@angular/platform-browser";
+import { NgModule } from "@angular/core";
 
-} from  '@angular/material';
+import { AppRoutingModule } from "./app-routing.module";
+import { AppComponent } from "./app.component";
+import { OrderComponent } from "./order/order.component";
+import { HomeComponent } from "./home/home.component";
+import { InvoiceComponent } from "./invoice/invoice.component";
 
-import { ServiceComponent } from './service/service.component';
-import { HomeComponent } from './home/home.component';
-import {FormsModule} from '@angular/forms';
+import {
+  MatButtonModule,
+  MatIconModule,
+  MatCardModule,
+  MatFormFieldModule,
+  MatInputModule,
+  MatSidenavModule,
+  MatToolbarModule,
+  MatMenuModule,
+  MatCheckboxModule
+} from "@angular/material";
+import { FormsModule } from "@angular/forms";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
-
+import { CommonModule } from "@angular/common";
+import { MatDialogModule } from "@angular/material/dialog";
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    ServiceComponent,
-    HomeComponent,
-
-  ],
+  declarations: [AppComponent, OrderComponent, HomeComponent, InvoiceComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule,
-    AppRoutingModule,
-    MatToolbarModule,
-    MatSidenavModule,
-    MatListModule,
     MatButtonModule,
+    BrowserAnimationsModule,
     MatIconModule,
-    MatTableModule,
-    MatPaginatorModule,
-    MatSortModule,
-    FormsModule,
-    MatInputModule,
     MatCardModule,
-    MatGridListModule
+    MatFormFieldModule,
+    MatInputModule,
+    MatSidenavModule,
+    MatToolbarModule,
+    MatMenuModule,
+    MatCheckboxModule,
+    MatDialogModule,
+    FormsModule,
+
+    CommonModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [InvoiceComponent]
 })
-export class AppModule { }
+export class AppModule {}

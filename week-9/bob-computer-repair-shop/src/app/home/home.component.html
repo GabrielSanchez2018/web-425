@@ -1,50 +1,5 @@
-<mat-card class="cardOne">
-
-  <h1>We have Great Discounts for you!</h1>
-  <h2>Select your Service</h2>
-  <!-- <mat-form-field>
-    <textarea matInput rows="10" [(ngModel)]="enteredValue" ></textarea>
-  </mat-form-field>
-<br>
-  <button
-  mat-raised-button
-  color="primary"
-  (click)="onAddPost(postInput)">Enter</button> -->
-</mat-card>
-
-
-
-
-<p>{{ newPost }}</p>
-<mat-card>
-  <mat-selection-list #shoes (selectionChange)="onSelection($event, shoes.selectedOptions.shoe)" >
-    <mat-list-option *ngFor="let shoe of typesOfShoes" [value]='shoe'>
-      {{shoe.name}}
-    </mat-list-option>
-  </mat-selection-list>
-
-  <p>
-    Options selected: {{shoes.selectedOptions.selected.length}}
-  </p>
-
-  <p>
-    Current selected value: {{ current_selected.selectedOptions }}
-  </p>
-
-  <p>Selected:</p>
-  <ul>
-    <li *ngFor="let i of shoes.selectedOptions.selected">
-      {{ i.value.name }} {{ i.value.price}}
-    </li>
-  </ul>
-
-  <p>Total:</p>
-
-
-  <ul>
-    <li *ngFor="let i of shoes.selectedOptions.selected">
-       {{  i.value.price}}
-    </li>
-  </ul>
-
-</mat-card>
+<div fxLayout="row">
+  <div fxFlex="100%">
+      <ng-content></ng-content>
+  </div>
+</div>

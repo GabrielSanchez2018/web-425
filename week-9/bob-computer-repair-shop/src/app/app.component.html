@@ -1,43 +1,42 @@
-<mat-toolbar color="primary">
-  <mat-toolbar-row>
-    <button mat-icon-button>
-      <mat-icon (click)="sidenav.toggle()">menu</mat-icon>
-    </button>
-    <h1>Bob Repair Shop</h1>
-    <span class="menu-spacer"></span>
-    <div>
-      <a mat-button [routerLink]="'/'"> Home </a>
-      <a mat-button [routerLink]="'/home'"> Request </a>
-      <a mat-button [routerLink]="'/contacts'"> Contacts </a>
-      
+<app-home>
+  <!-- Navbar -->
+  <mat-toolbar class="menu" role="header" color="primary">
+    <mat-toolbar-row>
+      <button mat-button class="toolbar__icon-button mat-button">
+        <mat-icon>computer</mat-icon>
+        <span style="margin-left: 5px !important" [routerLink]="['/']"
+          >Bob's Computer Repair Shop</span
+        >
+      </button>
 
-    </div>
-  </mat-toolbar-row>
+      <div fxFlex></div>
 
-  <mat-toolbar-row>
-      <span style="font-size: 12px;">Welcome </span>
+      <button
+        mat-icon-button
+        class="toolbar__icon-button"
+        [matMenuTriggerFor]="menu"
+      >
+        <mat-icon>account_circle</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item>
+          <mat-icon>perm_contact_calendar</mat-icon>
+          <span>My Profile</span>
+        </button>
+        <button mat-menu-item>
+          <mat-icon>settings</mat-icon>
+          <span>Settings</span>
+        </button>
+        <button mat-menu-item>
+          <mat-icon>exit_to_app</mat-icon>
+          <span>Logout</span>
+        </button>
+      </mat-menu>
     </mat-toolbar-row>
-</mat-toolbar>
+  </mat-toolbar>
+  <!-- endNavbar -->
 
-<!--Side Bar-->
-<mat-sidenav-container>
-  <mat-sidenav #sidenav>
-    <mat-nav-list>
+  <app-order></app-order>
+</app-home>
 
-      <a mat-list-item [routerLink]="'/accounts'"> Accounts </a>
-      <a mat-list-item [routerLink]="'/create-account'"> Request </a>
-      <a mat-list-item [routerLink]="'/contacts'"> Contacts </a>
-      <a mat-list-item [routerLink]="'/create-contact'"> Create Contact </a>
-      <a mat-list-item [routerLink]="'/activities'"> Activities </a>
-      <a mat-list-item [routerLink]="'/create-activity'"> Create Activity </a>
-      <a mat-list-item (click)="sidenav.toggle()" href="" mat-list-item>Close</a>
-
-    </mat-nav-list>
-  </mat-sidenav>
-  <mat-sidenav-content>
-    <div style="height: 88vh;">
-
-      <router-outlet></router-outlet>
-    </div>
-  </mat-sidenav-content>
-</mat-sidenav-container>
+<router-outlet></router-outlet>
