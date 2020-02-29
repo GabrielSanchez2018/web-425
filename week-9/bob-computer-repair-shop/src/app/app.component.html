@@ -1,6 +1,54 @@
-<app-home>
+
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <button mat-icon-button>
+      <mat-icon (click)="sidenav.toggle()">menu</mat-icon>
+    </button>
+    <h1>Bob's Computer Shop</h1>
+    <span class="menu-spacer"></span>
+    <div>
+      <a mat-button [routerLink]="'/main'"> home </a>
+      <a mat-button [routerLink]="'/home'"> home </a>
+      <a mat-button [routerLink]="'/create-activity'"> Create Activity </a>
+
+    </div>
+  </mat-toolbar-row>
+
+  <mat-toolbar-row class="welcomeMessage">
+      <span style="font-size: 17px; padding-left: 15%;">Welcome, to the BEST Prices</span>
+    </mat-toolbar-row>
+</mat-toolbar>
+
+
+<mat-sidenav-container>
+  <mat-sidenav #sidenav>
+    <mat-nav-list>
+
+      <a mat-list-item [routerLink]="'/accounts'"> Accounts </a>
+      
+      <a mat-list-item (click)="sidenav.toggle()" href="" mat-list-item>Close</a>
+
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div style="height: 88vh;">
+    
+
+      <app-order></app-order>
+ 
+      <router-outlet></router-outlet>
+
+      <app-main></app-main>
+      
+    
+
+
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+<!-- <app-home> -->
   <!-- Navbar -->
-  <mat-toolbar class="menu" role="header" color="primary">
+  <!-- <mat-toolbar class="menu" role="header" color="primary">
     <mat-toolbar-row>
       <button mat-button class="toolbar__icon-button mat-button">
         <mat-icon>computer</mat-icon>
@@ -33,10 +81,10 @@
         </button>
       </mat-menu>
     </mat-toolbar-row>
-  </mat-toolbar>
+  </mat-toolbar> -->
   <!-- endNavbar -->
 
-  <app-order></app-order>
+  <!-- <app-order></app-order>
 </app-home>
 
-<router-outlet></router-outlet>
+<router-outlet></router-outlet> -->

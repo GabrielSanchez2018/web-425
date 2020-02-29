@@ -17,16 +17,18 @@ import {
   MatSidenavModule,
   MatToolbarModule,
   MatMenuModule,
-  MatCheckboxModule
+  MatCheckboxModule,
+  MatListModule
 } from "@angular/material";
 import { FormsModule } from "@angular/forms";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
 import { CommonModule } from "@angular/common";
 import { MatDialogModule } from "@angular/material/dialog";
+import { MainComponent } from './main/main.component';
 
 @NgModule({
-  declarations: [AppComponent, OrderComponent, HomeComponent, InvoiceComponent],
+  declarations: [AppComponent, OrderComponent, HomeComponent, InvoiceComponent, MainComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -42,6 +44,7 @@ import { MatDialogModule } from "@angular/material/dialog";
     MatCheckboxModule,
     MatDialogModule,
     FormsModule,
+    MatListModule,
 
     CommonModule
   ],

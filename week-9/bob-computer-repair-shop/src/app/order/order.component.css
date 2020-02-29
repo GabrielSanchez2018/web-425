@@ -1,4 +1,6 @@
-
+.mat-card-title {
+  text-align: center;
+}
 .width {
   margin: 20px auto;
   width: 150px;
@@ -20,4 +22,13 @@ h2 {
 
 .inlineBlock {
   display: inline-block;
+}
+
+.mat-card {
+  width: 70%;
+  margin: 3% auto;
+ 
+}
+.buttonClass {
+  color: slateblue;
 }
