@@ -107,7 +107,7 @@ export class OrderComponent {
     }
     // Labor Charge
     if (formData.serviceOrders.labor) {
-      this.order.laborCharge.name = "Labor Charge @ $50/hr";
+      this.order.laborCharge.name = "Labor Charge at $50/hr";
       const laborAmount = formData.serviceOrders.labor * 50;
       this.order.laborCharge.price = laborAmount;
     }
