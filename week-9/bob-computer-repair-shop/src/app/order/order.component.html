@@ -9,8 +9,8 @@
   <mat-card class="form">
     <form #f="ngForm" (ngSubmit)="onSubmit(f.value);">
       <mat-card-content>
-        <h2>Select your Service</h2>
-      
+        <h2>Enter your Information</h2>
+
         <div ngModelGroup="serviceOrders">
           <!--Username-->
           <mat-card>
@@ -46,7 +46,7 @@
             />
           </mat-form-field>
         </mat-card>
-          
+        <h2>Select your Service</h2>
           <mat-card>
           <!-- Password Reset div-->
           <div class="passwordReset width inlineBlock">
@@ -83,7 +83,7 @@
                 </i>
 
             <br />
-            <label for="memoryUpgrade">Memory Ugrade</label>
+            <label for="memoryUpgrade">Memory Upgrade</label>
             <p>$129.99</p>
             <mat-checkbox name="memory" ngModel></mat-checkbox>
           </div>
@@ -129,7 +129,7 @@
           </div>
         </mat-card>
           <br>
-          
+
           <mat-card>
           <!-- Labor Hours div-->
           <div class="laborHours width inlineBlock">
@@ -155,7 +155,7 @@
           <br>
 
           <!--Tips-->
-          
+
           <div class="laborTip width inlineBlock">
             <i class="material-icons">
               insert_emoticon
@@ -169,14 +169,15 @@
               <option value="10">$10 Dls</option>
               <option value="15">$15 Dls</option>
               <option value="20">$20 Dls</option>
-              
+
               <option value="Cash"> Cash </option>
             </select>
           </div>
         </mat-card>
           <br>
-        
+
           <!-- Parts -->
+          <mat-card>
           <mat-form-field>
             <input
               type="text"
@@ -186,6 +187,7 @@
               ngModel
             />
           </mat-form-field>
+        </mat-card>
         </div>
         <div></div>
       </mat-card-content>
@@ -195,6 +197,7 @@
           Calculate
         </button>
       </mat-card-actions>
+
     </form>
   </mat-card>
 </div>
