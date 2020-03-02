@@ -1,7 +1,17 @@
+/*
+============================================
+; Title: Assignment 9.3
+; Author: Gabriel Sanchez
+;
+; Date: 3/1/2020
+; Description: Bob's Computer Repair Shop
+;===========================================
+*/
+
 import { Component, OnInit } from "@angular/core";
 import { MatDialog, MatDialogConfig } from "@angular/material";
 import { InvoiceComponent } from "../invoice/invoice.component";
-import { ValueConverter } from '@angular/compiler/src/render3/view/template';
+
 
 @Component({
   selector: "app-order",
@@ -42,8 +52,8 @@ export class OrderComponent {
   }
  //Submit Data   Password
   onSubmit(formData) {
-    
-    //Username 
+
+    //Username
     if (formData.serviceOrders.userName) {
       this.order.userName.name = "User Name";
       this.order.userName.info = formData.serviceOrders.userName;
@@ -53,7 +63,7 @@ export class OrderComponent {
       this.order.userLastName.name = "User Last Name";
       this.order.userLastName.info = formData.serviceOrders.userLastName;
     }
-    //User Email 
+    //User Email
     if (formData.serviceOrders.userEmail) {
       this.order.userEmail.name = "Email";
       this.order.userEmail.info = formData.serviceOrders.userEmail;
@@ -75,7 +85,7 @@ export class OrderComponent {
       this.order.memoryUpgrade.name = "RAM Upgrade";
       this.order.memoryUpgrade.price = 129.99;
     }
-    //Software Installation 
+    //Software Installation
     if (formData.serviceOrders.software) {
       this.order.softwareInstallation.name = "Software Installation";
       this.order.softwareInstallation.price = 49.99;
@@ -128,7 +138,7 @@ export class OrderComponent {
         this.order.laborCharge.price;
     }
     //tip
-    
+
     this.openDialog();
   }
 }

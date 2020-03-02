@@ -1,3 +1,13 @@
+/*
+============================================
+; Title: Assignment 9.3
+; Author: Richard Krasso
+; Edited by: Gabriel Sanchez
+; Date: 3/1/2020
+; Description: Bob's Computer Repair Shop
+;===========================================
+*/
+
 import { Component, OnInit } from '@angular/core';
 
 @Component({

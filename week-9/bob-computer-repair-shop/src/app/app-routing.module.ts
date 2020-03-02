@@ -1,3 +1,12 @@
+/*
+============================================
+; Title: Assignment 9.3
+; Author: Gabriel Sanchez
+;
+; Date: 3/1/2020
+; Description: Bob's Computer Repair Shop
+;===========================================
+*/
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';

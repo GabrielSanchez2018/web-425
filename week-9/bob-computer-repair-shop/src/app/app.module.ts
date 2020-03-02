@@ -1,4 +1,12 @@
-
+/*
+============================================
+; Title: Assignment 9.3
+; Author: Gabriel Sanchez
+;
+; Date: 3/1/2020
+; Description: Bob's Computer Repair Shop
+;===========================================
+*/
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 
